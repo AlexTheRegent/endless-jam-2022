@@ -1,0 +1,116 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/sprites/engine_fire.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/ship_layer_03.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/ship_bottom.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/ship_layer_01.png" type="Texture" id=4]
+[ext_resource path="res://prefabs/ship.gd" type="Script" id=5]
+[ext_resource path="res://prefabs/ship_part.tscn" type="PackedScene" id=6]
+[ext_resource path="res://prefabs/ship_parts.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/sprites/ship_layer_02.png" type="Texture" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 154, 61 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 154, 0, 154, 61 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 308, 0, 154, 61 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 462, 0, 154, 61 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 8.0
+
+[node name="ship" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="sprites" type="Node2D" parent="."]
+
+[node name="layer_00" type="Sprite" parent="sprites"]
+texture = ExtResource( 3 )
+
+[node name="layer_01" type="Sprite" parent="sprites"]
+texture = ExtResource( 4 )
+
+[node name="fire" type="AnimatedSprite" parent="sprites"]
+position = Vector2( -341, -239 )
+frames = SubResource( 5 )
+frame = 2
+playing = true
+
+[node name="fire2" type="AnimatedSprite" parent="sprites"]
+position = Vector2( -341, 249 )
+frames = SubResource( 5 )
+frame = 3
+playing = true
+
+[node name="fire3" type="AnimatedSprite" parent="sprites"]
+position = Vector2( -381, 97 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="fire4" type="AnimatedSprite" parent="sprites"]
+position = Vector2( -381, -89 )
+frames = SubResource( 5 )
+frame = 1
+playing = true
+
+[node name="roots" type="Node2D" parent="."]
+
+[node name="root_01" type="Area2D" parent="roots"]
+position = Vector2( 285, 3 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_01"]
+shape = SubResource( 6 )
+
+[node name="root_02" type="Area2D" parent="roots"]
+position = Vector2( 216, -15 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_02"]
+shape = SubResource( 6 )
+
+[node name="parts" type="Node2D" parent="."]
+
+[node name="root_01" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 285, 3 )
+
+[node name="root_01_01" parent="parts/root_01" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_01/root_01_01"]
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 734, 274, 62, 16 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_01/root_01_01"]
+polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
+
+[node name="root_01_02" parent="parts/root_01" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_01/root_01_02"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 734, 274, 62, 16 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_01/root_01_02"]
+polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
