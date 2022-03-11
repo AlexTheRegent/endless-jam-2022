@@ -7,7 +7,7 @@ const SPREAD_ANGLE := 30.0
 
 
 func _ready() -> void:
-	pass
+	randomize()
 
 
 func _physics_process(_delta: float) -> void:

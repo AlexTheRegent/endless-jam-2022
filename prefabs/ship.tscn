@@ -73,7 +73,7 @@ playing = true
 [node name="roots" type="Node2D" parent="."]
 
 [node name="root_01" type="Area2D" parent="roots"]
-position = Vector2( 285, 3 )
+position = Vector2( -213, -239 )
 collision_layer = 0
 collision_mask = 8
 monitorable = false
@@ -82,7 +82,7 @@ monitorable = false
 shape = SubResource( 6 )
 
 [node name="root_02" type="Area2D" parent="roots"]
-position = Vector2( 216, -15 )
+position = Vector2( -122, -239 )
 collision_layer = 0
 collision_mask = 8
 monitorable = false
@@ -90,27 +90,686 @@ monitorable = false
 [node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_02"]
 shape = SubResource( 6 )
 
+[node name="root_03" type="Area2D" parent="roots"]
+position = Vector2( -37, -239 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_03"]
+shape = SubResource( 6 )
+
+[node name="root_04" type="Area2D" parent="roots"]
+position = Vector2( -140, -181 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_04"]
+shape = SubResource( 6 )
+
+[node name="root_05" type="Area2D" parent="roots"]
+position = Vector2( -148, -138 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_05"]
+shape = SubResource( 6 )
+
+[node name="root_06" type="Area2D" parent="roots"]
+position = Vector2( -252, -89 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_06"]
+shape = SubResource( 6 )
+
+[node name="root_07" type="Area2D" parent="roots"]
+position = Vector2( -188, -89 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_07"]
+shape = SubResource( 6 )
+
+[node name="root_08" type="Area2D" parent="roots"]
+position = Vector2( -156, -43 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_08"]
+shape = SubResource( 6 )
+
+[node name="root_09" type="Area2D" parent="roots"]
+position = Vector2( -85, -77 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_09"]
+shape = SubResource( 6 )
+
+[node name="root_10" type="Area2D" parent="roots"]
+position = Vector2( 16, -51 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_10"]
+shape = SubResource( 6 )
+
+[node name="root_11" type="Area2D" parent="roots"]
+position = Vector2( 88, -35 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_11"]
+shape = SubResource( 6 )
+
+[node name="root_12" type="Area2D" parent="roots"]
+position = Vector2( 215, -16 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_12"]
+shape = SubResource( 6 )
+
+[node name="root_13" type="Area2D" parent="roots"]
+position = Vector2( -215, 247 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_13"]
+shape = SubResource( 6 )
+
+[node name="root_14" type="Area2D" parent="roots"]
+position = Vector2( -124, 247 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_14"]
+shape = SubResource( 6 )
+
+[node name="root_15" type="Area2D" parent="roots"]
+position = Vector2( -35, 247 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_15"]
+shape = SubResource( 6 )
+
+[node name="root_16" type="Area2D" parent="roots"]
+position = Vector2( -139, 190 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_16"]
+shape = SubResource( 6 )
+
+[node name="root_17" type="Area2D" parent="roots"]
+position = Vector2( -152, 146 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_17"]
+shape = SubResource( 6 )
+
+[node name="root_18" type="Area2D" parent="roots"]
+position = Vector2( -254, 97 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_18"]
+shape = SubResource( 6 )
+
+[node name="root_19" type="Area2D" parent="roots"]
+position = Vector2( -188, 97 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_19"]
+shape = SubResource( 6 )
+
+[node name="root_20" type="Area2D" parent="roots"]
+position = Vector2( -156, 49 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_20"]
+shape = SubResource( 6 )
+
+[node name="root_21" type="Area2D" parent="roots"]
+position = Vector2( -87, 85 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_21"]
+shape = SubResource( 6 )
+
+[node name="root_22" type="Area2D" parent="roots"]
+position = Vector2( 14, 58 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_22"]
+shape = SubResource( 6 )
+
+[node name="root_23" type="Area2D" parent="roots"]
+position = Vector2( 86, 42 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_23"]
+shape = SubResource( 6 )
+
+[node name="root_24" type="Area2D" parent="roots"]
+position = Vector2( 214, 23 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_24"]
+shape = SubResource( 6 )
+
+[node name="root_25" type="Area2D" parent="roots"]
+position = Vector2( -298, 4 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_25"]
+shape = SubResource( 6 )
+
+[node name="root_26" type="Area2D" parent="roots"]
+position = Vector2( -250, 4 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_26"]
+shape = SubResource( 6 )
+
+[node name="root_27" type="Area2D" parent="roots"]
+position = Vector2( 285, 3 )
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="roots/root_27"]
+shape = SubResource( 6 )
+
 [node name="parts" type="Node2D" parent="."]
 
 [node name="root_01" parent="parts" instance=ExtResource( 7 )]
-position = Vector2( 285, 3 )
+position = Vector2( -213, -239 )
 
 [node name="root_01_01" parent="parts/root_01" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_01/root_01_01"]
-texture = ExtResource( 8 )
+texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 734, 274, 62, 16 )
+region_rect = Rect2( 229, 21, 73, 38 )
 
 [node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_01/root_01_01"]
-polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
+polygon = PoolVector2Array( -38, 19, -38, -19, 36, -19, 36, 19 )
 
 [node name="root_01_02" parent="parts/root_01" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_01/root_01_02"]
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 229, 21, 73, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_01/root_01_02"]
+polygon = PoolVector2Array( -38, 19, -38, -19, 36, -19, 36, 19 )
+
+[node name="root_01_03" parent="parts/root_01" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_01/root_01_03"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 229, 21, 73, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_01/root_01_03"]
+polygon = PoolVector2Array( -38, 19, -38, -19, 36, -19, 36, 19 )
+
+[node name="root_02" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -122, -239 )
+
+[node name="root_02_01" parent="parts/root_02" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_02/root_02_01"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 310, 21, 94, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_02/root_02_01"]
+polygon = PoolVector2Array( -48, 19, -48, -19, 47, -18, 47, 19 )
+
+[node name="root_02_02" parent="parts/root_02" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_02/root_02_02"]
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 310, 21, 94, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_02/root_02_02"]
+polygon = PoolVector2Array( -48, 19, -48, -19, 47, -18, 47, 19 )
+
+[node name="root_02_03" parent="parts/root_02" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_02/root_02_03"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 310, 21, 94, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_02/root_02_03"]
+polygon = PoolVector2Array( -48, 19, -48, -19, 47, -18, 47, 19 )
+
+[node name="root_03" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -37, -239 )
+
+[node name="root_03_01" parent="parts/root_03" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_03/root_03_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_03/root_03_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_03_02" parent="parts/root_03" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_03/root_03_02"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_03/root_03_02"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_03_03" parent="parts/root_03" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_03/root_03_03"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_03/root_03_03"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_04" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -140, -181 )
+
+[node name="root_04_01" parent="parts/root_04" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_04/root_04_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 279, 80, 129, 36 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_04/root_04_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_05" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -148, -138 )
+
+[node name="root_05_01" parent="parts/root_05" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_05/root_05_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 269, 124, 118, 48 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_05/root_05_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_06" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -252, -89 )
+
+[node name="root_06_01" parent="parts/root_06" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_06/root_06_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_06/root_06_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_07" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -188, -89 )
+
+[node name="root_07_01" parent="parts/root_07" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_07/root_07_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_07/root_07_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_08" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -156, -43 )
+
+[node name="root_08_01" parent="parts/root_08" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_08/root_08_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_08/root_08_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_09" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -85, -77 )
+
+[node name="root_09_01" parent="parts/root_09" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_09/root_09_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_09/root_09_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_10" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 16, -51 )
+
+[node name="root_10_01" parent="parts/root_10" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_10/root_10_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_10/root_10_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_11" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 88, -35 )
+
+[node name="root_11_01" parent="parts/root_11" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_11/root_11_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_11/root_11_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_12" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 215, -16 )
+
+[node name="root_12_01" parent="parts/root_12" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_12/root_12_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_12/root_12_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_13" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -215, 247 )
+
+[node name="root_13_01" parent="parts/root_13" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_13/root_13_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_13/root_13_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_14" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -124, 247 )
+
+[node name="root_14_01" parent="parts/root_14" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_14/root_14_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_14/root_14_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_15" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -35, 247 )
+
+[node name="root_15_01" parent="parts/root_15" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_15/root_15_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_15/root_15_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_16" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -139, 190 )
+
+[node name="root_16_01" parent="parts/root_16" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_16/root_16_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_16/root_16_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_17" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -152, 146 )
+
+[node name="root_17_01" parent="parts/root_17" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_17/root_17_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_17/root_17_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_18" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -254, 97 )
+
+[node name="root_18_01" parent="parts/root_18" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_18/root_18_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_18/root_18_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_19" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -188, 97 )
+
+[node name="root_19_01" parent="parts/root_19" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_19/root_19_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_19/root_19_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_20" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -156, 49 )
+
+[node name="root_20_01" parent="parts/root_20" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_20/root_20_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_20/root_20_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_21" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -87, 85 )
+
+[node name="root_21_01" parent="parts/root_21" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_21/root_21_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_21/root_21_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_22" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 14, 58 )
+
+[node name="root_22_01" parent="parts/root_22" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_22/root_22_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_22/root_22_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_23" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 86, 42 )
+
+[node name="root_23_01" parent="parts/root_23" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_23/root_23_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_23/root_23_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_24" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 214, 23 )
+
+[node name="root_24_01" parent="parts/root_24" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_24/root_24_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_24/root_24_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_25" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -298, 4 )
+
+[node name="root_25_01" parent="parts/root_25" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_25/root_25_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_25/root_25_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_26" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( -250, 4 )
+
+[node name="root_26_01" parent="parts/root_26" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_26/root_26_01"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 412, 21, 61, 38 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_26/root_26_01"]
+polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
+
+[node name="root_27" parent="parts" instance=ExtResource( 7 )]
+position = Vector2( 285, 3 )
+
+[node name="root_27_01" parent="parts/root_27" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_27/root_27_01"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 734, 274, 62, 16 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_27/root_27_01"]
+polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
+
+[node name="root_27_02" parent="parts/root_27" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_27/root_27_02"]
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 734, 274, 62, 16 )
+
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_27/root_27_02"]
+polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
+
+[node name="root_27_03" parent="parts/root_27" instance=ExtResource( 6 )]
+
+[node name="sprite" type="Sprite" parent="parts/root_27/root_27_03"]
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 734, 274, 62, 16 )
 
-[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_01/root_01_02"]
+[node name="collision_polygon_2d" type="CollisionPolygon2D" parent="parts/root_27/root_27_03"]
 polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )

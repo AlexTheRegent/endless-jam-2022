@@ -1,6 +1,13 @@
 extends Node2D
 
 
+const GLIDE_SPEED := 3.0
+const GLIDE_RANGE := 10.0
+
+
+var _glide_target := Vector2.ZERO
+
+
 onready var _roots_nodes := $roots
 onready var _parts_nodes := $parts
 
@@ -13,6 +20,19 @@ func _ready() -> void:
 	for part in _parts_nodes.get_children():
 		if part.connect("damaged", self, "_on_part_damaged") != OK:
 			push_error("failed to connect 'damaged' signal on %s" % part.name)
+
+
+func _physics_process(delta: float) -> void:
+	# global_position += Vector2(randf() * SHAKE_MAGNITUDE * delta, randf() * SHAKE_MAGNITUDE * delta)
+
+	if global_position == _glide_target:
+		_glide_target = Vector2(randf() * GLIDE_RANGE - GLIDE_RANGE / 2.0, randf() * GLIDE_RANGE - GLIDE_RANGE / 2.0)
+
+	var glide_direction := (_glide_target - global_position)
+	if glide_direction.length() > GLIDE_SPEED * delta:
+		global_position += glide_direction.normalized() * GLIDE_SPEED * delta
+	else:
+		global_position = _glide_target
 
 
 func _on_part_damaged() -> void:
