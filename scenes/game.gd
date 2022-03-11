@@ -2,7 +2,8 @@ extends Node2D
 
 
 const ASTEROID := preload("res://prefabs/asteroid.tscn")
-const SPAWN_RANGE := 300.0
+const SPAWN_RANGE := 1000.0
+const SPREAD_ANGLE := 30.0
 
 
 func _ready() -> void:
@@ -11,19 +12,15 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if randf() < 0.01:
-		# var asteroid := ASTEROID.instance()
-		# $asteroids.add_child(asteroid)
+		var angle := randf() * 360.0
+		var gpos := Vector2(cos(deg2rad(angle)) * SPAWN_RANGE, sin(deg2rad(angle)) * SPAWN_RANGE)
 
-		# var angle := randf() * 360.0
-		# asteroid.global_position = Vector2(cos(deg2rad(angle)) * SPAWN_RANGE, sin(deg2rad(angle)) * SPAWN_RANGE)
+		var dir_angle := angle + (180.0 - randf() * SPREAD_ANGLE - SPREAD_ANGLE / 2.0)
+		var gtarget := Vector2(cos(deg2rad(dir_angle)) * SPAWN_RANGE, sin(deg2rad(dir_angle)) * SPAWN_RANGE)
+
+		var gdir := (gtarget - gpos).normalized()
+		spawn_asteroid(gpos, gdir)
 		pass
-
-	# if Input.is_key_pressed(KEY_LEFT):
-	# 	var asteroid := ASTEROID.instance()
-	# 	$asteroids.add_child(asteroid)
-
-	# 	asteroid.global_position = get_global_mouse_position()
-	# 	asteroid.direction = Vector2.LEFT
 
 
 func _unhandled_input(event: InputEvent) -> void:
