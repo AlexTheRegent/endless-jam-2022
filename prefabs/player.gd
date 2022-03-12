@@ -52,6 +52,8 @@ func _physics_process(_delta: float) -> void:
 				_root_sprite.z_index = 100
 				_root_sprite.texture = load("res://assets/sprites/root.png")
 				root.add_child(_root_sprite)
+
+				$animated_sprite.raise()
 		else:
 			_grabbed_entity.position = _grabbed_entity.global_position
 			_grabbed_entity.rotation = _grabbed_entity.global_rotation
