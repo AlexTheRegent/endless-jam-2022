@@ -8,6 +8,8 @@
 [node name="game" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="stars" type="Node2D" parent="."]
+
 [node name="ship" parent="." instance=ExtResource( 2 )]
 
 [node name="junk" type="Node2D" parent="."]
