@@ -76,4 +76,4 @@ func _on_body_entered(body: Node2D) -> void:
 	emit_signal("damaged")
 	body.queue_free()
 
-	call_deferred("detach", (_tail.global_position - body.global_position).normalized())
+	call_deferred("detach", body.direction)
