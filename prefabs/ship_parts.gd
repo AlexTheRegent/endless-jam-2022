@@ -1,6 +1,7 @@
 extends Node2D
 
 
+signal repaired
 signal damaged
 
 
@@ -65,6 +66,7 @@ func attach(part: Area2D) -> void:
 	call_deferred("add_child", _tail)
 	_tail.position = Vector2.ZERO
 
+	emit_signal("repaired")
 	part.emit_signal("attached")
 	part.set_collision_layer_bit(1, false)
 	if part.connect("body_entered", self, "_on_body_entered") != OK:

@@ -40,6 +40,7 @@ radius = 8.0
 script = ExtResource( 5 )
 
 [node name="sprites" type="Node2D" parent="."]
+position = Vector2( 72, 0 )
 
 [node name="layer_00" type="Sprite" parent="sprites"]
 position = Vector2( 0, -0.485 )
@@ -69,6 +70,7 @@ frames = SubResource( 5 )
 playing = true
 
 [node name="roots" type="Node2D" parent="."]
+position = Vector2( 72, 0 )
 
 [node name="root_01" type="Area2D" parent="roots"]
 position = Vector2( -213, -239 )
@@ -314,6 +316,7 @@ monitorable = false
 shape = SubResource( 6 )
 
 [node name="parts" type="Node2D" parent="."]
+position = Vector2( 72, 0 )
 
 [node name="root_01" parent="parts" instance=ExtResource( 7 )]
 position = Vector2( -213, -239 )

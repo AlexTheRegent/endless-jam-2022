@@ -5,6 +5,10 @@ const GLIDE_SPEED := 3.0
 const GLIDE_RANGE := 10.0
 
 
+var total_parts := 0
+var alive_parts := 0
+
+
 var _glide_target := Vector2.ZERO
 
 
@@ -20,6 +24,12 @@ func _ready() -> void:
 	for part in _parts_nodes.get_children():
 		if part.connect("damaged", self, "_on_part_damaged") != OK:
 			push_error("failed to connect 'damaged' signal on %s" % part.name)
+		if part.connect("repaired", self, "_on_part_repaired") != OK:
+			push_error("failed to connect 'repaired' signal on %s" % part.name)
+
+		total_parts += 3
+
+	alive_parts = total_parts
 
 
 func _physics_process(delta: float) -> void:
@@ -34,7 +44,11 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_part_damaged() -> void:
-	pass
+	alive_parts -= 1
+
+
+func _on_part_repaired() -> void:
+	alive_parts += 1
 
 
 func _on_area_entered(part: Area2D, root: Node2D) -> void:
