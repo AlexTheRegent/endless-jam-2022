@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void:
 		var gdir := (gtarget - gpos).normalized()
 		spawn_asteroid(gpos, gdir)
 
-	if randf() < 0.08:
+	if randf() < 0.04:
 		var gpos := Vector2(SPAWN_RANGE, randf() * SPAWN_RANGE * 2 - SPAWN_RANGE)
 		spawn_star(gpos, randf() * (STAR_SPEED_MAX - STAR_SPEED_MIN) + STAR_SPEED_MIN)
 
