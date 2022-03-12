@@ -27,6 +27,12 @@ func _physics_process(_delta: float) -> void:
 		if _grabbed_entity == null:
 			$ray_cast_2d.force_raycast_update()
 			var collider := $ray_cast_2d.get_collider() as Node2D
+			if collider == null or collider.get_parent().name != "junk":
+				for junk in get_node("/root/game/junk").get_children():
+					var colliders := junk.get_world_2d().direct_space_state.intersect_point(global_position, 1, [], 2, false, true) as Array
+					if colliders.size() > 0:
+						collider = colliders[0].collider
+
 			if collider != null && collider.get_parent().name == "junk":
 				collider.direction = Vector2.ZERO
 				collider.monitorable = true

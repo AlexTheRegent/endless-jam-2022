@@ -46,7 +46,7 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=10]
 
 [node name="player" type="KinematicBody2D"]
-collision_layer = 0
+collision_layer = 4
 script = ExtResource( 2 )
 
 [node name="camera_2d" type="Camera2D" parent="."]
@@ -60,7 +60,7 @@ collide_with_bodies = false
 
 [node name="animated_sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
