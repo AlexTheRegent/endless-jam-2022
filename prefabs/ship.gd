@@ -23,8 +23,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	# global_position += Vector2(randf() * SHAKE_MAGNITUDE * delta, randf() * SHAKE_MAGNITUDE * delta)
-
 	if global_position == _glide_target:
 		_glide_target = Vector2(randf() * GLIDE_RANGE - GLIDE_RANGE / 2.0, randf() * GLIDE_RANGE - GLIDE_RANGE / 2.0)
 
@@ -41,7 +39,6 @@ func _on_part_damaged() -> void:
 
 func _on_area_entered(part: Area2D, root: Node2D) -> void:
 	if root.name != part.name.substr(0, 7):
-		print("this root is not parent")
 		return
 
 	var parts := _parts_nodes.get_node(root.name)
@@ -49,14 +46,11 @@ func _on_area_entered(part: Area2D, root: Node2D) -> void:
 	if part_num != 1:
 		var part_tail := parts.get_tail() as Node2D
 		if part_tail == null:
-			print("missing layer")
 			return
 
 		var tail_name := part_tail.name as String
 		var tail_num := int(tail_name.substr(8))
 		if tail_num + 1 != part_num:
-			print("missing layer")
 			return
 
 	parts.attach(part)
-	print("good")

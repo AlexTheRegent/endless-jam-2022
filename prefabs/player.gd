@@ -16,15 +16,6 @@ func _physics_process(_delta: float) -> void:
 	var direction := Vector2(right, down).normalized()
 
 	var _velocity := move_and_slide(direction * speed)
-	# if direction.x > 0:
-	# 	$animated_sprite.flip_h = false
-	# elif direction.x < 0:
-	# 	$animated_sprite.flip_h = true
-
-	# var mouse_position := get_local_mouse_position()
-	# var player_position := get_global_transform_with_canvas().origin
-	# $animated_sprite.flip_h = (mouse_position.x < player_position.x)
-	# prints(mouse_position, player_position)
 
 	if _grabbed_entity == null:
 		var mouse_position := get_local_mouse_position()

@@ -8,12 +8,6 @@ var _tail: Area2D
 
 
 func _ready() -> void:
-	# _tail = get_tail()
-	# _tail.monitoring = true
-
-	# if _tail.connect("body_entered", self, "_on_body_entered") != OK:
-	# 	push_error("failed to connect 'body_entered' signal on %s" % _tail.name)
-
 	update_tail()
 
 
@@ -37,7 +31,6 @@ func update_tail() -> void:
 
 func detach(direction: Vector2) -> void:
 	_tail.monitoring = false
-	# _tail.monitorable = true
 
 	_tail.position = _tail.global_position
 	_tail.get_parent().remove_child(_tail)
@@ -45,6 +38,7 @@ func detach(direction: Vector2) -> void:
 	get_node("/root/game/junk").add_child(_tail)
 	_tail.direction = direction
 
+	_tail.set_collision_layer_bit(1, true)
 	update_tail()
 
 
@@ -62,6 +56,7 @@ func attach(part: Area2D) -> void:
 	_tail.position = Vector2.ZERO
 
 	part.emit_signal("attached")
+	part.set_collision_layer_bit(1, false)
 	if part.connect("body_entered", self, "_on_body_entered") != OK:
 		push_error("failed to connect 'body_entered' signal on %s" % part.name)
 
