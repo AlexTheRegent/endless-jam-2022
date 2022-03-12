@@ -24,6 +24,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="traveled" type="Label" parent="control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -321.0
+margin_top = 16.0
+margin_right = 321.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+text = "distance traveled: 1000km"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="health" type="Label" parent="control"]
 anchor_left = 1.0
 anchor_right = 1.0
@@ -32,7 +46,7 @@ margin_top = 16.0
 margin_right = -24.0
 margin_bottom = 63.0
 custom_fonts/font = ExtResource( 1 )
-text = "14m"
+text = "10%"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
