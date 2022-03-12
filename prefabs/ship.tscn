@@ -49,24 +49,24 @@ texture = ExtResource( 3 )
 [node name="fire" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -341, -239 )
 frames = SubResource( 5 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="fire2" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -341, 249 )
 frames = SubResource( 5 )
-frame = 2
 playing = true
 
 [node name="fire3" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -381, 97 )
 frames = SubResource( 5 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="fire4" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -381, -89 )
 frames = SubResource( 5 )
+frame = 2
 playing = true
 
 [node name="roots" type="Node2D" parent="."]

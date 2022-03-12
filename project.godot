@@ -83,8 +83,8 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_clear_color=Color( 0, 0.0431373, 0.0901961, 1 )
 quality/filters/msaa=2
 quality/filters/use_fxaa=true
-quality/filters/use_debanding=true
 environment/default_environment="res://default_env.tres"
