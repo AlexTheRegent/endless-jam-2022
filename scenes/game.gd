@@ -4,8 +4,8 @@ extends Node2D
 const ASTEROID := preload("res://prefabs/asteroid.tscn")
 const STAR := preload("res://prefabs/star.tscn")
 
-const SPAWN_RANGE := 1000.0
-const SPREAD_ANGLE := 30.0
+const SPAWN_RANGE := 2000.0
+const SPREAD_ANGLE := 15.0
 
 const STAR_SPEED_MIN := 5.0
 const STAR_SPEED_MAX := 20.0
@@ -14,7 +14,7 @@ const STAR_SPEED_MAX := 20.0
 func _ready() -> void:
 	randomize()
 
-	for _i in 200:
+	for _i in 400:
 		var gpos := Vector2(randf() * SPAWN_RANGE * 2 - SPAWN_RANGE, randf() * SPAWN_RANGE * 2 - SPAWN_RANGE)
 		spawn_star(gpos, randf() * (STAR_SPEED_MAX - STAR_SPEED_MIN) + STAR_SPEED_MIN)
 
