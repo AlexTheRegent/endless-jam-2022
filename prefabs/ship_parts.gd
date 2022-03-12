@@ -4,6 +4,10 @@ extends Node2D
 signal damaged
 
 
+const OUTLINE_SHADER := preload("res://assets/shaders/outline_shader.tres")
+const OUTLINE_COLOR := Color(0, 1, 1)
+
+
 var _tail: Area2D
 
 
@@ -38,6 +42,11 @@ func detach(direction: Vector2) -> void:
 	get_node("/root/game/junk").add_child(_tail)
 	_tail.direction = direction
 
+	_tail.get_node("sprite").material = ShaderMaterial.new()
+	_tail.get_node("sprite").material.shader = OUTLINE_SHADER
+	_tail.get_node("sprite").material.set_shader_param("outline_color", OUTLINE_COLOR)
+	_tail.get_node("sprite").material.set_shader_param("width", 1.0)
+
 	_tail.set_collision_layer_bit(1, true)
 	update_tail()
 
@@ -49,6 +58,7 @@ func attach(part: Area2D) -> void:
 
 	part.call_deferred("set_monitorable", false)
 	part.call_deferred("set_monitoring", true)
+	part.get_node("sprite").material = null
 	_tail = part
 
 	_tail.get_parent().remove_child(_tail)

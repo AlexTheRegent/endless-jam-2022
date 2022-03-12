@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/sprites/engine_fire.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/ship_layer_03.png" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://prefabs/ship_part.tscn" type="PackedScene" id=6]
 [ext_resource path="res://prefabs/ship_parts.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/sprites/ship_layer_02.png" type="Texture" id=8]
-[ext_resource path="res://assets/shaders/outline.tres" type="Material" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -49,24 +48,24 @@ texture = ExtResource( 3 )
 [node name="fire" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -341, -239 )
 frames = SubResource( 5 )
+frame = 1
 playing = true
 
 [node name="fire2" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -341, 249 )
 frames = SubResource( 5 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="fire3" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -381, 97 )
 frames = SubResource( 5 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="fire4" type="AnimatedSprite" parent="sprites"]
 position = Vector2( -381, -89 )
 frames = SubResource( 5 )
-frame = 3
 playing = true
 
 [node name="roots" type="Node2D" parent="."]
@@ -322,7 +321,6 @@ position = Vector2( -213, -239 )
 [node name="root_01_01" parent="parts/root_01" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_01/root_01_01"]
-material = ExtResource( 9 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 227, 19, 77, 42 )
@@ -333,7 +331,6 @@ polygon = PoolVector2Array( -38, 19, -38, -19, 36, -19, 36, 19 )
 [node name="root_01_02" parent="parts/root_01" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_01/root_01_02"]
-material = ExtResource( 9 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 227, 19, 77, 42 )
@@ -344,7 +341,6 @@ polygon = PoolVector2Array( -38, 19, -38, -19, 36, -19, 36, 19 )
 [node name="root_01_03" parent="parts/root_01" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_01/root_01_03"]
-material = ExtResource( 9 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 227, 19, 77, 42 )
@@ -358,7 +354,6 @@ position = Vector2( -122, -239 )
 [node name="root_02_01" parent="parts/root_02" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_02/root_02_01"]
-material = ExtResource( 9 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 308, 19, 98, 42 )
@@ -369,7 +364,6 @@ polygon = PoolVector2Array( -48, 19, -48, -19, 47, -18, 47, 19 )
 [node name="root_02_02" parent="parts/root_02" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_02/root_02_02"]
-material = ExtResource( 9 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 308, 19, 98, 42 )
@@ -380,7 +374,6 @@ polygon = PoolVector2Array( -48, 19, -48, -19, 47, -18, 47, 19 )
 [node name="root_02_03" parent="parts/root_02" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_02/root_02_03"]
-material = ExtResource( 9 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 308, 19, 98, 42 )
@@ -394,7 +387,6 @@ position = Vector2( -37, -239 )
 [node name="root_03_01" parent="parts/root_03" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_03/root_03_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -406,7 +398,6 @@ polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
 [node name="root_03_02" parent="parts/root_03" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_03/root_03_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -418,7 +409,6 @@ polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
 [node name="root_03_03" parent="parts/root_03" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_03/root_03_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -433,7 +423,6 @@ position = Vector2( -140, -181 )
 [node name="root_04_01" parent="parts/root_04" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_04/root_04_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -445,7 +434,6 @@ polygon = PoolVector2Array( -66, 18, -48, -18, 63, -18, 43, 18 )
 [node name="root_04_02" parent="parts/root_04" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_04/root_04_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -457,7 +445,6 @@ polygon = PoolVector2Array( -66, 18, -48, -18, 63, -18, 43, 18 )
 [node name="root_04_03" parent="parts/root_04" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_04/root_04_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -472,7 +459,6 @@ position = Vector2( -151, -135 )
 [node name="root_05_01" parent="parts/root_05" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_05/root_05_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -484,7 +470,6 @@ polygon = PoolVector2Array( -60, 2, -55, -24, 58, -24, 57, 1, 9, 24, -13, 5 )
 [node name="root_05_02" parent="parts/root_05" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_05/root_05_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -496,7 +481,6 @@ polygon = PoolVector2Array( -60, 2, -55, -24, 58, -24, 57, 1, 9, 24, -13, 5 )
 [node name="root_05_03" parent="parts/root_05" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_05/root_05_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -511,7 +495,6 @@ position = Vector2( -252, -89 )
 [node name="root_06_01" parent="parts/root_06" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_06/root_06_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -523,7 +506,6 @@ polygon = PoolVector2Array( -25, 29, -25, -29, 23, -29, 23, 29 )
 [node name="root_06_02" parent="parts/root_06" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_06/root_06_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -535,7 +517,6 @@ polygon = PoolVector2Array( -25, 29, -25, -29, 23, -29, 23, 29 )
 [node name="root_06_03" parent="parts/root_06" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_06/root_06_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -550,7 +531,6 @@ position = Vector2( -188, -89 )
 [node name="root_07_01" parent="parts/root_07" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_07/root_07_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -562,7 +542,6 @@ polygon = PoolVector2Array( -33, 29, -33, -29, 20, -29, 31, 1, 19, 29 )
 [node name="root_07_02" parent="parts/root_07" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_07/root_07_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -574,7 +553,6 @@ polygon = PoolVector2Array( -33, 29, -33, -29, 20, -29, 31, 1, 19, 29 )
 [node name="root_07_03" parent="parts/root_07" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_07/root_07_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -589,7 +567,6 @@ position = Vector2( -166, -48 )
 [node name="root_08_01" parent="parts/root_08" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_08/root_08_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -601,7 +578,6 @@ polygon = PoolVector2Array( -2, 29, -62, 0, -1, -2, 32, -30, 59, -2 )
 [node name="root_08_02" parent="parts/root_08" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_08/root_08_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -613,7 +589,6 @@ polygon = PoolVector2Array( -2, 29, -62, 0, -1, -2, 32, -30, 59, -2 )
 [node name="root_08_03" parent="parts/root_08" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_08/root_08_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -628,7 +603,6 @@ position = Vector2( -86, -81 )
 [node name="root_09_01" parent="parts/root_09" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_09/root_09_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -640,7 +614,6 @@ polygon = PoolVector2Array( -17, 26, -45, -3, 5, -27, 42, 12, 12, 27, -7, 21 )
 [node name="root_09_02" parent="parts/root_09" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_09/root_09_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -652,7 +625,6 @@ polygon = PoolVector2Array( -17, 26, -45, -3, 5, -27, 42, 12, 12, 27, -7, 21 )
 [node name="root_09_03" parent="parts/root_09" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_09/root_09_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -667,7 +639,6 @@ position = Vector2( 16, -51 )
 [node name="root_10_01" parent="parts/root_10" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_10/root_10_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -679,7 +650,6 @@ polygon = PoolVector2Array( -57, 7, -1, -21, 55, -7, -1, 21 )
 [node name="root_10_02" parent="parts/root_10" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_10/root_10_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -691,7 +661,6 @@ polygon = PoolVector2Array( -57, 7, -1, -21, 55, -7, -1, 21 )
 [node name="root_10_03" parent="parts/root_10" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_10/root_10_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -706,7 +675,6 @@ position = Vector2( 88, -35 )
 [node name="root_11_01" parent="parts/root_11" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_11/root_11_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -718,7 +686,6 @@ polygon = PoolVector2Array( -65, 8, -12, -20, 65, -1, -18, 20 )
 [node name="root_11_02" parent="parts/root_11" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_11/root_11_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -730,7 +697,6 @@ polygon = PoolVector2Array( -65, 8, -12, -20, 65, -1, -18, 20 )
 [node name="root_11_03" parent="parts/root_11" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_11/root_11_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -745,7 +711,6 @@ position = Vector2( 215, -16 )
 [node name="root_12_01" parent="parts/root_12" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_12/root_12_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -757,7 +722,6 @@ polygon = PoolVector2Array( -53, -8, -34, -13, 50, 7, 29, 14 )
 [node name="root_12_02" parent="parts/root_12" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_12/root_12_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -769,7 +733,6 @@ polygon = PoolVector2Array( -53, -8, -34, -13, 50, 7, 29, 14 )
 [node name="root_12_03" parent="parts/root_12" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_12/root_12_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -784,7 +747,6 @@ position = Vector2( -215, 247 )
 [node name="root_13_01" parent="parts/root_13" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_13/root_13_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -796,7 +758,6 @@ polygon = PoolVector2Array( -37, 19, -37, -19, 35, -19, 35, 19 )
 [node name="root_13_02" parent="parts/root_13" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_13/root_13_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -808,7 +769,6 @@ polygon = PoolVector2Array( -37, 19, -37, -19, 35, -19, 35, 19 )
 [node name="root_13_03" parent="parts/root_13" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_13/root_13_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -823,7 +783,6 @@ position = Vector2( -124, 247 )
 [node name="root_14_01" parent="parts/root_14" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_14/root_14_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -835,7 +794,6 @@ polygon = PoolVector2Array( -48, 19, -48, -19, 46, -19, 46, 19 )
 [node name="root_14_02" parent="parts/root_14" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_14/root_14_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -847,7 +805,6 @@ polygon = PoolVector2Array( -48, 19, -48, -19, 46, -19, 46, 19 )
 [node name="root_14_03" parent="parts/root_14" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_14/root_14_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -862,7 +819,6 @@ position = Vector2( -36.493, 247 )
 [node name="root_15_01" parent="parts/root_15" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_15/root_15_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -874,7 +830,6 @@ polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
 [node name="root_15_02" parent="parts/root_15" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_15/root_15_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -886,7 +841,6 @@ polygon = PoolVector2Array( -32, 19, -32, -19, 30, -19, 30, 19 )
 [node name="root_15_03" parent="parts/root_15" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_15/root_15_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -901,7 +855,6 @@ position = Vector2( -136, 189 )
 [node name="root_16_01" parent="parts/root_16" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_16/root_16_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -913,7 +866,6 @@ polygon = PoolVector2Array( -48, 18, -65, -18, 43, -18, 48, 3, 64, 18 )
 [node name="root_16_02" parent="parts/root_16" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_16/root_16_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -925,7 +877,6 @@ polygon = PoolVector2Array( -48, 18, -65, -18, 43, -18, 48, 3, 64, 18 )
 [node name="root_16_03" parent="parts/root_16" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_16/root_16_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -940,7 +891,6 @@ position = Vector2( -151, 140.5 )
 [node name="root_17_01" parent="parts/root_17" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_17/root_17_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -952,7 +902,6 @@ polygon = PoolVector2Array( -53, 25.5, -60, -3.5, -12, -6.5, 8, -24.5, 57, -1.5,
 [node name="root_17_02" parent="parts/root_17" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_17/root_17_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -964,7 +913,6 @@ polygon = PoolVector2Array( -53, 25.5, -60, -3.5, -12, -6.5, 8, -24.5, 57, -1.5,
 [node name="root_17_03" parent="parts/root_17" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_17/root_17_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -979,7 +927,6 @@ position = Vector2( -254, 97 )
 [node name="root_18_01" parent="parts/root_18" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_18/root_18_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -991,7 +938,6 @@ polygon = PoolVector2Array( -25, 29, -25, -29, 23, -29, 23, 29 )
 [node name="root_18_02" parent="parts/root_18" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_18/root_18_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1003,7 +949,6 @@ polygon = PoolVector2Array( -25, 29, -25, -29, 23, -29, 23, 29 )
 [node name="root_18_03" parent="parts/root_18" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_18/root_18_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1018,7 +963,6 @@ position = Vector2( -188, 97 )
 [node name="root_19_01" parent="parts/root_19" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_19/root_19_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1030,7 +974,6 @@ polygon = PoolVector2Array( -33, 29, -33, -29, 21, -29, 32, -1, 21, 29 )
 [node name="root_19_02" parent="parts/root_19" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_19/root_19_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1042,7 +985,6 @@ polygon = PoolVector2Array( -33, 29, -33, -29, 21, -29, 32, -1, 21, 29 )
 [node name="root_19_03" parent="parts/root_19" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_19/root_19_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1057,7 +999,6 @@ position = Vector2( -167, 56 )
 [node name="root_20_01" parent="parts/root_20" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_20/root_20_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1069,7 +1010,6 @@ polygon = PoolVector2Array( -60, 0, -3, -29, 59, 1, 31, 30, 0, 2 )
 [node name="root_20_02" parent="parts/root_20" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_20/root_20_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1081,7 +1021,6 @@ polygon = PoolVector2Array( -60, 0, -3, -29, 59, 1, 31, 30, 0, 2 )
 [node name="root_20_03" parent="parts/root_20" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_20/root_20_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1096,7 +1035,6 @@ position = Vector2( -87, 88 )
 [node name="root_21_01" parent="parts/root_21" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_21/root_21_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1108,7 +1046,6 @@ polygon = PoolVector2Array( -45, 1, -17, -26, -7, -22, 14, -26, 42, -12, 5, 26 )
 [node name="root_21_02" parent="parts/root_21" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_21/root_21_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1120,7 +1057,6 @@ polygon = PoolVector2Array( -45, 1, -17, -26, -7, -22, 14, -26, 42, -12, 5, 26 )
 [node name="root_21_03" parent="parts/root_21" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_21/root_21_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1135,7 +1071,6 @@ position = Vector2( 15, 58 )
 [node name="root_22_01" parent="parts/root_22" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_22/root_22_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1147,7 +1082,6 @@ polygon = PoolVector2Array( -2, 20, -53, -6, 3, -20, 54, 6 )
 [node name="root_22_02" parent="parts/root_22" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_22/root_22_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1159,7 +1093,6 @@ polygon = PoolVector2Array( -2, 20, -53, -6, 3, -20, 54, 6 )
 [node name="root_22_03" parent="parts/root_22" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_22/root_22_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1174,7 +1107,6 @@ position = Vector2( 86, 42 )
 [node name="root_23_01" parent="parts/root_23" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_23/root_23_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1186,7 +1118,6 @@ polygon = PoolVector2Array( -11, 21, -63, -6, -12, -19, 63, 0 )
 [node name="root_23_02" parent="parts/root_23" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_23/root_23_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1198,7 +1129,6 @@ polygon = PoolVector2Array( -11, 21, -63, -6, -12, -19, 63, 0 )
 [node name="root_23_03" parent="parts/root_23" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_23/root_23_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1213,7 +1143,6 @@ position = Vector2( 214, 23 )
 [node name="root_24_01" parent="parts/root_24" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_24/root_24_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1225,7 +1154,6 @@ polygon = PoolVector2Array( -33, 14, -53, 7, 31, -13, 50, -7 )
 [node name="root_24_02" parent="parts/root_24" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_24/root_24_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1237,7 +1165,6 @@ polygon = PoolVector2Array( -33, 14, -53, 7, 31, -13, 50, -7 )
 [node name="root_24_03" parent="parts/root_24" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_24/root_24_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1252,7 +1179,6 @@ position = Vector2( -298, 4 )
 [node name="root_25_01" parent="parts/root_25" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_25/root_25_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1264,7 +1190,6 @@ polygon = PoolVector2Array( 5, 52, -19, 0, 5, -53, 17, -53, -7, 0, 17, 53 )
 [node name="root_25_02" parent="parts/root_25" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_25/root_25_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1276,7 +1201,6 @@ polygon = PoolVector2Array( 5, 52, -19, 0, 5, -53, 17, -53, -7, 0, 17, 53 )
 [node name="root_25_03" parent="parts/root_25" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_25/root_25_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1291,7 +1215,6 @@ position = Vector2( -250, 4 )
 [node name="root_26_01" parent="parts/root_26" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_26/root_26_01"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 4 )
 region_enabled = true
@@ -1303,7 +1226,6 @@ polygon = PoolVector2Array( -7, 53, -7, -53, 5, -53, 5, 53 )
 [node name="root_26_02" parent="parts/root_26" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_26/root_26_02"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -1315,7 +1237,6 @@ polygon = PoolVector2Array( -7, 53, -7, -53, 5, -53, 5, 53 )
 [node name="root_26_03" parent="parts/root_26" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_26/root_26_03"]
-material = ExtResource( 9 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -1326,12 +1247,11 @@ visible = false
 polygon = PoolVector2Array( -7, 53, -7, -53, 5, -53, 5, 53 )
 
 [node name="root_27" parent="parts" instance=ExtResource( 7 )]
-position = Vector2( 285, 3 )
+position = Vector2( 284, 3 )
 
 [node name="root_27_01" parent="parts/root_27" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_27/root_27_01"]
-material = ExtResource( 9 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 876, 273, 61, 19 )
@@ -1342,7 +1262,6 @@ polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
 [node name="root_27_02" parent="parts/root_27" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_27/root_27_02"]
-material = ExtResource( 9 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 876, 273, 61, 19 )
@@ -1353,7 +1272,6 @@ polygon = PoolVector2Array( -31, -0.451, -2, -7.451, 26, 0.549, 4, 7.549 )
 [node name="root_27_03" parent="parts/root_27" instance=ExtResource( 6 )]
 
 [node name="sprite" type="Sprite" parent="parts/root_27/root_27_03"]
-material = ExtResource( 9 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 876, 273, 61, 19 )
