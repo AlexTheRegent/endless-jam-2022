@@ -4,6 +4,7 @@ extends KinematicBody2D
 export (float) var speed := 200.0
 
 var _grabbed_entity: Node2D
+var _root_sprite: Sprite
 
 
 func _ready() -> void:
@@ -37,6 +38,14 @@ func _physics_process(_delta: float) -> void:
 
 				if collider.connect("attached", self, "_on_part_attached", [], CONNECT_ONESHOT) != OK:
 					push_error("failed to connect 'attached' signal on %s" % collider.name)
+
+				var ship := get_node("/root/game/ship") as Node2D
+				var root := ship.get_node("roots/%s" % collider.name.substr(0, 7))
+
+				_root_sprite = Sprite.new()
+				_root_sprite.z_index = 100
+				_root_sprite.texture = load("res://assets/sprites/root.png")
+				root.add_child(_root_sprite)
 		else:
 			_grabbed_entity.position = _grabbed_entity.global_position
 			_grabbed_entity.rotation = _grabbed_entity.global_rotation
@@ -44,8 +53,10 @@ func _physics_process(_delta: float) -> void:
 			get_node("/root/game/junk").add_child(_grabbed_entity)
 
 			_grabbed_entity.disconnect("attached", self, "_on_part_attached")
-			_grabbed_entity = null
+			_on_part_attached()
 
 
 func _on_part_attached() -> void:
+	_root_sprite.queue_free()
 	_grabbed_entity = null
+	_root_sprite = null

@@ -74,6 +74,9 @@ func attach(part: Area2D) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	if body.get_parent().name != "asteroids":
+		return
+
 	_tail.disconnect("body_entered", self, "_on_body_entered")
 	emit_signal("damaged")
 	body.queue_free()
