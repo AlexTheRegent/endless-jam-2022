@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 
+const BULLET := preload("res://prefabs/bullet.tscn")
+
 export (float) var speed := 200.0
 
 var _grabbed_entity: Node2D
@@ -12,6 +14,12 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
+	_handle_movement()
+	_handle_shooting()
+	_handle_grab()
+
+
+func _handle_movement() -> void:
 	var down := Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	var right := Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	var direction := Vector2(right, down).normalized()
@@ -21,7 +29,28 @@ func _physics_process(_delta: float) -> void:
 	if _grabbed_entity == null:
 		var mouse_position := get_local_mouse_position()
 		$animated_sprite.flip_h = mouse_position.x < 0.0
+		$weapon_end.position.x = abs($weapon_end.position.x) * (-1 if $animated_sprite.flip_h else 1)
 
+
+func _handle_shooting() -> void:
+	if _grabbed_entity != null:
+		return
+
+	if Input.is_action_just_pressed("shoot") == false:
+		return
+
+	var bullet := BULLET.instance() as Node2D
+	get_node("/root/game/asteroids").add_child(bullet)
+
+	# bullet.global_rotation = atan(($weapon_end.global_position.y - get_global_mouse_position().y) / $weapon_end.global_position.x - get_global_mouse_position().x) # $weapon_end.global_position.angle_to(get_global_mouse_position()) - PI/4
+	# prints($weapon_end.global_position, get_global_mouse_position())
+
+	bullet.direction = (get_global_mouse_position() - $weapon_end.global_position).normalized()
+	bullet.global_position = $weapon_end.global_position
+	bullet.rotation = bullet.direction.angle()
+
+
+func _handle_grab() -> void:
 	$ray_cast_2d.look_at(get_global_mouse_position())
 	if Input.is_action_just_pressed("use"):
 		if _grabbed_entity == null:

@@ -47,6 +47,7 @@ animations = [ {
 
 [node name="player" type="KinematicBody2D"]
 collision_layer = 4
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="camera_2d" type="Camera2D" parent="."]
@@ -65,3 +66,6 @@ playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]
 shape = SubResource( 10 )
+
+[node name="weapon_end" type="Position2D" parent="."]
+position = Vector2( 16, 0 )
