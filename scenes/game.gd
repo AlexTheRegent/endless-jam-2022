@@ -1,7 +1,6 @@
 extends Node2D
 
 
-const ASTEROID := preload("res://prefabs/asteroid.tscn")
 const STAR := preload("res://prefabs/star.tscn")
 
 const SPAWN_RANGE := 2000.0
@@ -28,7 +27,9 @@ func _physics_process(_delta: float) -> void:
 		var gtarget := Vector2(cos(deg2rad(dir_angle)) * SPAWN_RANGE, sin(deg2rad(dir_angle)) * SPAWN_RANGE)
 
 		var gdir := (gtarget - gpos).normalized()
-		spawn_asteroid(gpos, gdir)
+
+		var asteroid_size := "big" if randf() < 0.6 else "small"
+		spawn_asteroid(gpos, gdir, asteroid_size)
 
 	if randf() < 0.04:
 		var gpos := Vector2(SPAWN_RANGE, randf() * SPAWN_RANGE * 2 - SPAWN_RANGE)
@@ -48,8 +49,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				spawn_asteroid(get_global_mouse_position(), Vector2.DOWN)
 
 
-func spawn_asteroid(position: Vector2, direction: Vector2, speed := 200.0) -> void:
-	var asteroid := ASTEROID.instance()
+func spawn_asteroid(position: Vector2, direction: Vector2, asteroid_size := "big", speed := 200.0) -> void:
+	var asteroid := load("res://prefabs/asteroid_%s_0%.0f.tscn" % [asteroid_size, rand_range(1, 4)]).instance() as Node2D
 	$asteroids.add_child(asteroid)
 
 	asteroid.global_position = position
