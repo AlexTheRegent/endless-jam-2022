@@ -7,6 +7,7 @@ signal damaged
 
 const OUTLINE_SHADER := preload("res://assets/shaders/outline_shader.tres")
 const OUTLINE_COLOR := Color(0, 1, 1)
+const EXPLOSION := preload("res://prefabs/explosion.tscn")
 
 
 var _tail: Area2D
@@ -80,5 +81,10 @@ func _on_body_entered(body: Node2D) -> void:
 	_tail.disconnect("body_entered", self, "_on_body_entered")
 	emit_signal("damaged")
 	body.queue_free()
+
+	var explosion := EXPLOSION.instance()
+	explosion.position = (body.global_position + _tail.global_position) / 2.0
+	get_node("/root/game").add_child(explosion)
+	explosion.play("default")
 
 	call_deferred("detach", body.direction)

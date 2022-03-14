@@ -5,9 +5,9 @@ const SMALL_ASTEROID_DISTANCE_SPREAD := 80.0
 const SMALL_ASTEROID_ANGLE_SPREAD := 15.0
 
 
-func hit(_bullet: Node2D) -> void:
+func hit(bullet: Node2D) -> void:
 	if randf() < 1.25:
 		get_node("/root/game").spawn_asteroid(global_position - Vector2(randf() * SMALL_ASTEROID_DISTANCE_SPREAD, randf() * SMALL_ASTEROID_DISTANCE_SPREAD), direction, "small")
 		get_node("/root/game").spawn_asteroid(global_position + Vector2(randf() * SMALL_ASTEROID_DISTANCE_SPREAD, randf() * SMALL_ASTEROID_DISTANCE_SPREAD), direction, "small")
 
-	queue_free()
+	.hit(bullet)

@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 
 const LIFETIME_DISTANCE_SQUARED := pow(2000.0, 2)
+const EXPLOSION := preload("res://prefabs/explosion.tscn")
 
 
 var direction := Vector2.ZERO
@@ -24,4 +25,9 @@ func _physics_process(_delta: float) -> void:
 
 
 func hit(_bullet: Node2D) -> void:
+	var explosion := EXPLOSION.instance()
+	explosion.position = global_position
+	get_node("/root/game").add_child(explosion)
+	explosion.play("default")
+
 	queue_free()
