@@ -16,6 +16,8 @@ script = ExtResource( 3 )
 
 [node name="asteroids" type="Node2D" parent="."]
 
+[node name="bullets" type="Node2D" parent="."]
+
 [node name="player" parent="." instance=ExtResource( 1 )]
 
 [node name="ui" parent="." instance=ExtResource( 4 )]

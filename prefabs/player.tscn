@@ -52,7 +52,7 @@ script = ExtResource( 2 )
 
 [node name="camera_2d" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.75, 0.75 )
 
 [node name="ray_cast_2d" type="RayCast2D" parent="."]
 cast_to = Vector2( 30, 0 )
@@ -62,6 +62,7 @@ collide_with_bodies = false
 
 [node name="animated_sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 9 )
+frame = 6
 playing = true
 
 [node name="collision_shape_2d" type="CollisionShape2D" parent="."]

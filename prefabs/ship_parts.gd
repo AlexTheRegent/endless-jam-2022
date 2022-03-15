@@ -79,6 +79,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.get_parent().name != "asteroids":
 		return
 
+	print(body)
+
 	_tail.disconnect("body_entered", self, "_on_body_entered")
 	emit_signal("damaged")
 	body.queue_free()

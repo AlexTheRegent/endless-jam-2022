@@ -40,7 +40,7 @@ func _handle_shooting() -> void:
 		return
 
 	var bullet := BULLET.instance() as Node2D
-	get_node("/root/game/asteroids").add_child(bullet)
+	get_node("/root/game/bullets").add_child(bullet)
 
 	# bullet.global_rotation = atan(($weapon_end.global_position.y - get_global_mouse_position().y) / $weapon_end.global_position.x - get_global_mouse_position().x) # $weapon_end.global_position.angle_to(get_global_mouse_position()) - PI/4
 	# prints($weapon_end.global_position, get_global_mouse_position())
