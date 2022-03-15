@@ -19,7 +19,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if randf() < 0.01:
+	if randf() < 0.008:
 		var angle := randf() * 360.0
 		var gpos := Vector2(cos(deg2rad(angle)) * SPAWN_RANGE, sin(deg2rad(angle)) * SPAWN_RANGE)
 
