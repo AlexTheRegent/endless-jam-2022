@@ -38,6 +38,7 @@ func update_tail() -> void:
 func detach(direction: Vector2) -> void:
 	_tail.monitoring = false
 
+	_tail.set_meta("center", _tail.position)
 	_tail.position = _tail.global_position
 	_tail.get_parent().remove_child(_tail)
 
@@ -65,7 +66,7 @@ func attach(part: Area2D) -> void:
 
 	_tail.get_parent().remove_child(_tail)
 	call_deferred("add_child", _tail)
-	_tail.position = Vector2.ZERO
+	_tail.call_deferred("set_position", _tail.get_meta("center"))
 
 	emit_signal("repaired")
 	part.emit_signal("attached")
