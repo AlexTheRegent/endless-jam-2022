@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 
 const BULLET := preload("res://prefabs/bullet.tscn")
+const MAX_DISTANCE_FROM_SHIP := 85.0
 
 export (float) var speed := 200.0
 
@@ -25,6 +26,17 @@ func _handle_movement() -> void:
 	var direction := Vector2(right, down).normalized()
 
 	var _velocity := move_and_slide(direction * speed)
+	# if global_position.distance_to(Vector2.ZERO) > MAX_DISTANCE_FROM_SHIP * 15.0:
+	# 	global_position = (global_position - Vector2.ZERO).normalized() * MAX_DISTANCE_FROM_SHIP * 15.0
+
+	if global_position.x > MAX_DISTANCE_FROM_SHIP * 15.0:
+		global_position.x = MAX_DISTANCE_FROM_SHIP * 15.0
+	elif global_position.x < -MAX_DISTANCE_FROM_SHIP * 15.0:
+		global_position.x = -MAX_DISTANCE_FROM_SHIP * 15.0
+	elif global_position.y > MAX_DISTANCE_FROM_SHIP * 15.0:
+		global_position.y = MAX_DISTANCE_FROM_SHIP * 15.0
+	elif global_position.y < -MAX_DISTANCE_FROM_SHIP * 15.0:
+		global_position.y = -MAX_DISTANCE_FROM_SHIP * 15.0
 
 	if _grabbed_entity == null:
 		var mouse_position := get_local_mouse_position()
