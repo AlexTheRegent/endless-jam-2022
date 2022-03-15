@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Starship_03"
+config/name="Starship"
 run/main_scene="res://scenes/game.tscn"
 config/icon="res://icon.png"
 

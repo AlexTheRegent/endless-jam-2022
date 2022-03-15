@@ -9,12 +9,56 @@ export (float) var speed := 200.0
 var _grabbed_entity: Node2D
 var _root_sprite: Sprite
 
+var _weapon_end_length: Vector2
+
 
 func _ready() -> void:
-	pass
+	_weapon_end_length = $weapon_end.position
 
 
 func _physics_process(_delta: float) -> void:
+	# var mouse_angle := rad2deg(Vector2.RIGHT.angle_to(get_global_mouse_position()))
+	var mouse_angle := rad2deg(Vector2.RIGHT.angle_to(get_local_mouse_position()))
+	if mouse_angle > 90:
+		mouse_angle = 180 - mouse_angle
+	if mouse_angle < -90:
+		mouse_angle = -(180 + mouse_angle)
+
+	if abs(mouse_angle) < 15:
+		if $animated_sprite.animation != "angle_0":
+			$weapon_end.position = _weapon_end_length.rotated(0)
+			var frame_idx := $animated_sprite.frame as int
+			$animated_sprite.animation = "angle_0"
+			$animated_sprite.frame = frame_idx
+
+	elif mouse_angle > 15 and mouse_angle < 45:
+		if $animated_sprite.animation != "angle_m30":
+			$weapon_end.position = _weapon_end_length.rotated(deg2rad(30))
+			var frame_idx := $animated_sprite.frame as int
+			$animated_sprite.animation = "angle_m30"
+			$animated_sprite.frame = frame_idx
+
+	elif mouse_angle > 45 and mouse_angle < 90:
+		if $animated_sprite.animation != "angle_m60":
+			$weapon_end.position = _weapon_end_length.rotated(deg2rad(60))
+			var frame_idx := $animated_sprite.frame as int
+			$animated_sprite.animation = "angle_m60"
+			$animated_sprite.frame = frame_idx
+
+	elif mouse_angle < -15 and mouse_angle > -45:
+		if $animated_sprite.animation != "angle_p30":
+			$weapon_end.position = _weapon_end_length.rotated(-deg2rad(30))
+			var frame_idx := $animated_sprite.frame as int
+			$animated_sprite.animation = "angle_p30"
+			$animated_sprite.frame = frame_idx
+
+	elif mouse_angle < -45 and mouse_angle > -90:
+		if $animated_sprite.animation != "angle_p60":
+			$weapon_end.position = _weapon_end_length.rotated(-deg2rad(60))
+			var frame_idx := $animated_sprite.frame as int
+			$animated_sprite.animation = "angle_p60"
+			$animated_sprite.frame = frame_idx
+
 	_handle_movement()
 	_handle_shooting()
 	_handle_grab()
