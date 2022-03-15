@@ -53,6 +53,10 @@ script = ExtResource( 2 )
 [node name="camera_2d" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.75, 0.75 )
+limit_left = -1280
+limit_top = -1280
+limit_right = 1280
+limit_bottom = 1280
 
 [node name="ray_cast_2d" type="RayCast2D" parent="."]
 cast_to = Vector2( 30, 0 )
