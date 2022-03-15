@@ -36,17 +36,17 @@ func _physics_process(_delta: float) -> void:
 		spawn_star(gpos, randf() * (STAR_SPEED_MAX - STAR_SPEED_MIN) + STAR_SPEED_MIN)
 
 
-# func _unhandled_input(event: InputEvent) -> void:
-# 	if event is InputEventKey:
-# 		if event.pressed and event.echo == false:
-# 			if event.scancode == KEY_LEFT:
-# 				spawn_asteroid(get_global_mouse_position(), Vector2.LEFT)
-# 			elif event.scancode == KEY_RIGHT:
-# 				spawn_asteroid(get_global_mouse_position(), Vector2.RIGHT)
-# 			elif event.scancode == KEY_UP:
-# 				spawn_asteroid(get_global_mouse_position(), Vector2.UP)
-# 			elif event.scancode == KEY_DOWN:
-# 				spawn_asteroid(get_global_mouse_position(), Vector2.DOWN)
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed and event.echo == false:
+			if event.scancode == KEY_LEFT:
+				spawn_asteroid(get_global_mouse_position(), Vector2.LEFT)
+			elif event.scancode == KEY_RIGHT:
+				spawn_asteroid(get_global_mouse_position(), Vector2.RIGHT)
+			elif event.scancode == KEY_UP:
+				spawn_asteroid(get_global_mouse_position(), Vector2.UP)
+			elif event.scancode == KEY_DOWN:
+				spawn_asteroid(get_global_mouse_position(), Vector2.DOWN)
 
 
 func spawn_asteroid(position: Vector2, direction: Vector2, asteroid_size := "big", speed := 200.0) -> void:
