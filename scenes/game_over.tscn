@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/default_48pt.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/game_over.gd" type="Script" id=2]
+
+[node name="game_over" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -383.0
+margin_top = -67.0
+margin_right = 383.0
+margin_bottom = 3.0
+custom_fonts/font = ExtResource( 1 )
+text = "Your ship was destroyed"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -212.0
+margin_top = 42.0
+margin_right = 212.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 1 )
+text = "Play again"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -44,6 +44,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_part_damaged() -> void:
+	var ship_lost_health := (total_parts - alive_parts) as int
+
+	if ship_lost_health > 25:
+		if get_tree().change_scene("res://scenes/game_over.tscn") != OK:
+			push_error('failed to change scene')
+
 	alive_parts -= 1
 
 
